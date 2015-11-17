@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>News Aggregator</title>
+</head>
+  </head>
+
+  <body>
+    <h1>Here are the articles!</h1>
+
+    <ol>
+      <%@articles.each do |article|%>
+      <li><%="#{article[0]}"%></li>
+        <ul>
+          <li><%="#{article[1]}"%></li>
+          <li><a href="<%="#{article[2]}"%>" target="_blank"><%="#{article[2]}"%></a></li>
+        </ul>
+        <%end%>
+    </ol>
+
+    <ul> <a href="/articles/new">Add Article</a></ul>
+  </body>
+</html>
